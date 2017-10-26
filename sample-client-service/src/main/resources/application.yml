@@ -11,7 +11,7 @@ eureka:
       zone: zone1
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/,http://localhost:8762/eureka/,http://localhost:8763/eureka/
 server:  
   port: ${PORT:9100}
 
@@ -24,6 +24,19 @@ eureka:
       zone: zone2
   client:
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka/
+      defaultZone: http://localhost:8762/eureka/,http://localhost:8761/eureka/,http://localhost:8763/eureka/
 server:  
   port: ${PORT:9110}
+  
+---
+spring:
+  profiles: zone3
+eureka:
+  instance:
+    metadataMap:
+      zone: zone3
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8763/eureka/,http://localhost:8761/eureka/,http://localhost:8762/eureka/
+server:  
+  port: ${PORT:9120}
