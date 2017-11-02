@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ClientController {
 
-	@Value("${spring.profiles}")
-	private String zone;
-	
-	@GetMapping("/ping")
-	public String ping() {
-		return "I'm in zone " + zone;
-	}
+//	@Value("${spring.profiles}")
+//	private String zone;
+//	
+//	@GetMapping("/ping")
+//	public String ping() {
+//		return "I'm in zone " + zone;
+//	}
 	
 }
