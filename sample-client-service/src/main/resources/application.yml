@@ -4,11 +4,22 @@ spring:
 
 server:  
   port: ${PORT:8081}
+  ssl:
+    key-store: classpath:keystore.p12
+    key-store-password: 123456
+    keyStoreType: PKCS12
+    keyAlias: client
 
 eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URL:http://localhost:8761/eureka/}
+  instance:
+    securePortEnabled: true
+    nonSecurePortEnabled: false
+    statusPageUrl: https://${eureka.hostname}:${server.port}/info
+    healthCheckUrl: https://${eureka.hostname}:${server.port}/health
+    homePageUrl: https://${eureka.hostname}:${server.port}/
    
 endpoints:
   shutdown:
