@@ -3,4 +3,6 @@ spring:
     name: client-service
   cloud:
     config:
-      uri: http://localhost:8889
+      discovery:
+        enabled: true
+        serviceId: config-server

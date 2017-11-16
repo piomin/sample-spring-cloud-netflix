@@ -4,6 +4,6 @@ eureka:
       zone: zone3
   client:
     serviceUrl:
-      defaultZone: http://localhost:8763/eureka/
+      defaultZone: http://localhost:8761/eureka/
 server:  
   port: ${PORT:8083}
