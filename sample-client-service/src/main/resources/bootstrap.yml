@@ -4,3 +4,6 @@ spring:
   cloud:
     config:
       uri: http://localhost:8889
+      profile: zone1
+      label: discovery
+#      label: e546dd6 // uncomment for rollback
