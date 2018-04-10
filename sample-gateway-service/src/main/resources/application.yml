@@ -21,10 +21,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
     registerWithEureka: false
-    preferSameZoneEureka: true
-  instance:
-    metadataMap:
-      zone: zone1
 server:  
   port: ${PORT:8765}
 
@@ -36,10 +32,6 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8762/eureka/
     registerWithEureka: false
-    preferSameZoneEureka: true
-  instance:
-    metadataMap:
-      zone: zone2
 server:  
   port: ${PORT:8766}
 
@@ -51,9 +43,5 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8763/eureka/
     registerWithEureka: false
-    preferSameZoneEureka: true
-  instance:
-    metadataMap:
-      zone: zone3
 server:  
   port: ${PORT:8767}
